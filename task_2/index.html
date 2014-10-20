@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Equalizr</title>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="./spanEqualizr.js" type="text/javascript"></script>
+<style>
+	.equalizer-wrapper {
+		float:left; margin: 0 20px 20px 0;
+	}
+	.equalizer {
+		overflow: hidden;
+		border:1px solid #ddd;
+	}
+	.equalizer.small {
+		width: 100px;
+		height: 100px;
+	}
+	.equalizer.normal {
+		width: 200px;
+		height: 200px;
+	}
+	.equalizer.big {
+		width: 300px;
+		height: 300px;
+	}
+</style>
+<script>      
+      window.onload = function () {
+      	$('#eq_1 .equalizer').spanEqualizr({timeout:'1000',colWidth:'2'});
+      	$('#eq_2 .equalizer').spanEqualizr({timeout:'1000',colWidth:'2'});
+      	$('#eq_3 .equalizer').spanEqualizr({timeout:'1000',colWidth:'2'});
+      }
+  </script>
+</head>
+<body>
+	<h1>Equalizers</h1>
+	<div id="eq_1" class="equalizer-wrapper">
+		<h2>First</h2>
+		<div class="equalizer small"></div>
+	</div>
+	<div id="eq_2" class="equalizer-wrapper">
+		<h2>Second</h2>
+		<div class="equalizer normal"></div>
+	</div>
+	<div id="eq_3" class="equalizer-wrapper">
+		<h2>Third</h2>
+		<div class="equalizer big"></div>
+	</div>
+</body>
+</html>
